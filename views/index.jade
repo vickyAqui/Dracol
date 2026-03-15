@@ -1,5 +1,373 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  //- Custom cursor
+  #cursor
+  #cursor-ring
+
+  //- ── NAV ──────────────────────────────────────────────
+  nav
+    a.nav-logo(href='#')
+      span.logo-mark
+        img(src='/images/LogoDracolSemFundo.png' alt='Logo da Dracol')
+      | DRACOL
+
+    ul.nav-links
+      li: a(href='#sobre') Sobre
+      li: a(href='#compromissos') Compromissos
+      li: a(href='#servicos') Serviços
+      li: a(href='#contato') Contato
+
+    a.nav-pill(href='#contato') Iniciar projeto
+
+  //- ── HERO ─────────────────────────────────────────────
+  section#hero
+    .hero-grid
+    .hero-glow
+    .hero-brand-spot
+      img(src='/images/LogoDracolSemFundo.png' alt='Marca Dracol')
+
+    .hero-content
+      span.hero-eyebrow
+        span
+        | Software &amp; Soluções Digitais · Est. 2026
+
+      h1.hero-headline
+        | SERVIÇOS
+        br
+        | QUE 
+        em atingem
+        br
+        | AS ESTRELAS
+
+      p.hero-sub
+        | Desenvolvemos software inteligente e eficaz para empresas que recusam ser comuns.
+        | Soluções que transformam desafios em vantagens reais.
+
+      .hero-ctas
+        a.btn-glow(href='#servicos') Ver serviços →
+        a.btn-glass(href='#sobre')
+          svg(viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2')
+            circle(cx='12' cy='12' r='10')
+            path(d='M12 8v4l3 3')
+          | Sobre a Dracol
+
+      .hero-strip
+        .strip-track
+          span Software Seguro
+          span.hi ✦
+          span Desenvolvimento Web
+          span.hi ✦
+          span Aplicativos Mobile
+          span.hi ✦
+          span Suporte 24/7
+          span.hi ✦
+          span Soluções Rápidas
+          span.hi ✦
+          span Sistemas de Gestão
+          span.hi ✦
+          //- Duplicated for seamless marquee loop
+          span Software Seguro
+          span.hi ✦
+          span Desenvolvimento Web
+          span.hi ✦
+          span Aplicativos Mobile
+          span.hi ✦
+          span Suporte 24/7
+          span.hi ✦
+          span Soluções Rápidas
+          span.hi ✦
+          span Sistemas de Gestão
+          span.hi ✦
+
+  //- ── SOBRE ────────────────────────────────────────────
+  section#sobre
+
+      .about-text.reveal
+        p.section-label Nossa história
+        h2.section-title
+          | Quem 
+          em somos
+        br
+        p.about-body
+          | A Dracol é uma empresa de softwares fundada em 2026 com o propósito de criar soluções
+          | inteligentes e eficazes. Acreditamos que tecnologia bem aplicada transforma negócios e muda vidas.
+        p.about-body
+          | Nosso time é formado por especialistas apaixonados por inovação, sempre prontos para entender
+          | os desafios dos clientes e entregar resultados que superam expectativas.
+        .about-tags
+          span.tag Inovação
+          span.tag Segurança
+          span.tag Agilidade
+          span.tag Qualidade
+          span.tag Suporte
+
+      .reveal
+        .about-card
+          .about-card-inner
+            .about-card-header
+              p.section-label(style='margin:0') Sistema ativo
+              .about-card-dots
+                span(style='background:#ef4444')
+                span(style='background:#f59e0b')
+                span(style='background:#22c55e')
+
+            svg.network-svg(viewBox='0 0 360 200' fill='none')
+              line(x1='180' y1='100' x2='60'  y2='50'  stroke='rgba(59,130,246,.18)' stroke-width='1' stroke-dasharray='4 4')
+              line(x1='180' y1='100' x2='300' y2='50'  stroke='rgba(59,130,246,.18)' stroke-width='1' stroke-dasharray='4 4')
+              line(x1='180' y1='100' x2='60'  y2='155' stroke='rgba(59,130,246,.18)' stroke-width='1' stroke-dasharray='4 4')
+              line(x1='180' y1='100' x2='300' y2='155' stroke='rgba(59,130,246,.18)' stroke-width='1' stroke-dasharray='4 4')
+              line(x1='180' y1='100' x2='180' y2='18'  stroke='rgba(34,211,238,.12)'  stroke-width='1' stroke-dasharray='4 4')
+              line(x1='180' y1='100' x2='180' y2='182' stroke='rgba(34,211,238,.12)'  stroke-width='1' stroke-dasharray='4 4')
+              line(x1='60'  y1='50'  x2='300' y2='50'  stroke='rgba(255,255,255,.04)' stroke-width='1')
+              line(x1='60'  y1='155' x2='300' y2='155' stroke='rgba(255,255,255,.04)' stroke-width='1')
+              circle(cx='60'  cy='50'  r='13' fill='rgba(59,130,246,.1)' stroke='rgba(59,130,246,.35)' stroke-width='1')
+              circle(cx='60'  cy='50'  r='5'  fill='#3b82f6')
+              circle(cx='300' cy='50'  r='13' fill='rgba(59,130,246,.1)' stroke='rgba(59,130,246,.35)' stroke-width='1')
+              circle(cx='300' cy='50'  r='5'  fill='#3b82f6')
+              circle(cx='60'  cy='155' r='13' fill='rgba(59,130,246,.1)' stroke='rgba(59,130,246,.35)' stroke-width='1')
+              circle(cx='60'  cy='155' r='5'  fill='#3b82f6')
+              circle(cx='300' cy='155' r='13' fill='rgba(59,130,246,.1)' stroke='rgba(59,130,246,.35)' stroke-width='1')
+              circle(cx='300' cy='155' r='5'  fill='#3b82f6')
+              circle(cx='180' cy='18'  r='7'  fill='rgba(34,211,238,.1)'  stroke='rgba(34,211,238,.4)'  stroke-width='1')
+              circle(cx='180' cy='18'  r='3'  fill='#22d3ee')
+              circle(cx='180' cy='182' r='7'  fill='rgba(34,211,238,.1)'  stroke='rgba(34,211,238,.4)'  stroke-width='1')
+              circle(cx='180' cy='182' r='3'  fill='#22d3ee')
+              circle(cx='180' cy='100' r='30' fill='rgba(59,130,246,.07)' stroke='rgba(59,130,246,.25)' stroke-width='1')
+              circle(cx='180' cy='100' r='17' fill='#3b82f6')
+              text(x='180' y='105' text-anchor='middle' font-size='11' fill='white' font-family="'Bebas Neue',sans-serif" letter-spacing='1') D
+
+            .about-stat-row
+              .about-stat
+                .about-stat-n
+                  | 100
+                  span %
+                .about-stat-l Dedicação
+              .about-stat
+                .about-stat-n
+                  | 24
+                  span /7
+                .about-stat-l Suporte ativo
+
+  //- ── COMPROMISSOS ─────────────────────────────────────
+  section#compromissos
+
+      .comp-header.reveal
+        div
+          p.section-label O que nos move
+          h2.section-title
+            | Nossos 
+            em compromissos
+        p.comp-header-right
+          | Cada projeto carrega nossa assinatura: seguro, rápido e com suporte humano real.
+
+      .comp-grid.reveal
+
+        .comp-card
+          span.comp-num 01
+          .comp-icon
+            svg(viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+              path(d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z')
+              polyline(points='9 12 11 14 15 10')
+          h3.comp-title Softwares Seguros
+          p.comp-desc
+            | Desenvolvemos com as melhores práticas de segurança. Seus dados e os de seus clientes
+            | permanecem protegidos em todas as camadas.
+
+        .comp-card
+          span.comp-num 02
+          .comp-icon
+            svg(viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+              path(d='M13 2L3 14h9l-1 8 10-12h-9l1-8z')
+          h3.comp-title Soluções Rápidas
+          p.comp-desc
+            | Processos otimizados para entregar com agilidade sem sacrificar qualidade.
+            | Você tem resultados quando precisa, não quando convém.
+
+        .comp-card
+          span.comp-num 03
+          .comp-icon
+            svg(viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+              path(d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2')
+              circle(cx='9' cy='7' r='4')
+              path(d='M23 21v-2a4 4 0 0 0-3-3.87')
+              path(d='M16 3.13a4 4 0 0 1 0 7.75')
+          h3.comp-title Suporte ao Usuário
+          p.comp-desc
+            | Nossa equipe está disponível para atender com atenção e rapidez.
+            | Suporte humano, não robôs — porque problemas reais merecem soluções reais.
+
+  //- ── SERVIÇOS ─────────────────────────────────────────
+  section#servicos
+
+      .serv-intro.reveal
+        p.section-label O que entregamos
+        h2.section-title
+          | Serviços 
+          em que movem
+          br
+          | seu negócio
+
+      .reveal
+        .serv-item
+          span.serv-num 01
+          .serv-info
+            h3 Desenvolvimento Web
+            p Sites, sistemas e plataformas modernas, responsivas e de alta performance.
+          .serv-tags
+            span.serv-tag React
+            span.serv-tag Node.js
+            span.serv-tag APIs
+
+        .serv-item
+          span.serv-num 02
+          .serv-info
+            h3 Aplicativos Mobile
+            p Apps iOS e Android com foco em experiência e integração com sistemas existentes.
+          .serv-tags
+            span.serv-tag iOS
+            span.serv-tag Android
+            span.serv-tag React Native
+
+        .serv-item
+          span.serv-num 03
+          .serv-info
+            h3 Sistemas de Gestão
+            p ERPs, CRMs e plataformas customizadas que automatizam e geram eficiência.
+          .serv-tags
+            span.serv-tag ERP
+            span.serv-tag CRM
+            span.serv-tag Automação
+
+        .serv-item
+          span.serv-num 04
+          .serv-info
+            h3 Consultoria em TI
+            p Estratégia tecnológica para negócios que precisam crescer com segurança e escala.
+          .serv-tags
+            span.serv-tag Cloud
+            span.serv-tag Arquitetura
+            span.serv-tag Segurança
+
+  //- ── CONTATO ──────────────────────────────────────────
+  section#contato
+      .contact-wrap
+
+        .contact-left.reveal
+          p.section-label Fale com a gente
+          h2.section-title
+            | Pronto para 
+            em começar?
+          p.contact-tagline
+            | Conte-nos sobre seu projeto. Respondemos rápido e sem enrolação —
+            | assim como entregamos nossos softwares.
+
+          .contact-channels
+
+            a.ch-link(href='https://wa.me/5511954589662')
+              .ch-icon
+                svg(viewBox='0 0 24 24' fill='currentColor')
+                  path(d='M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z')
+                  path(d='M12 2C6.477 2 2 6.477 2 12c0 1.99.583 3.84 1.59 5.389L2.05 22l4.74-1.539C8.212 21.469 10.077 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z')
+              .ch-info
+                .ch-label WhatsApp
+                .ch-value (11) 95458-9662
+              span.ch-arrow →
+
+            a.ch-link(href='https://instagram.com/dracols')
+              .ch-icon
+                svg(viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+                  rect(x='2' y='2' width='20' height='20' rx='5')
+                  path(d='M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z')
+                  line(x1='17.5' y1='6.5' x2='17.51' y2='6.5')
+              .ch-info
+                .ch-label Instagram
+                .ch-value @dracols
+              span.ch-arrow →
+
+            a.ch-link(href='tel:40028922')
+              .ch-icon
+                svg(viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+                  path(d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.43 2 2 0 0 1 3.57 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.74a16 16 0 0 0 6.06 6.06l.86-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z')
+              .ch-info
+                .ch-label Telefone
+                .ch-value 4002-8922
+              span.ch-arrow →
+
+        .contact-right.reveal
+          .contact-right-glow
+          h3.cf-title Envie uma mensagem
+          p.cf-sub Retornamos em até 1 dia útil.
+
+          .form-field
+            label Nome
+            input(type='text' placeholder='Seu nome completo')
+
+          .form-field
+            label Email
+            input(type='email' placeholder='seu@email.com')
+
+          .form-field
+            label Mensagem
+            textarea(placeholder='Conte-nos sobre seu projeto…')
+
+          button.form-submit Enviar mensagem →
+
+  //- ── FOOTER ───────────────────────────────────────────
+  footer
+      .footer-left
+        span.footer-brand DRACOL
+        span.footer-sep
+        span.footer-copy © 2026 Dracol. Todos os direitos reservados.
+
+      ul.footer-links
+        li: a(href='#sobre') Sobre
+        li: a(href='#compromissos') Compromissos
+        li: a(href='#servicos') Serviços
+        li: a(href='#contato') Contato
+
+  //- ── SCRIPTS ──────────────────────────────────────────
+  script.
+      // Custom cursor
+      const cur  = document.getElementById('cursor');
+      const ring = document.getElementById('cursor-ring');
+      let mx = 0, my = 0, rx = 0, ry = 0;
+
+      document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+
+      (function tick() {
+        cur.style.left  = mx + 'px';
+        cur.style.top   = my + 'px';
+        rx += (mx - rx) * .12;
+        ry += (my - ry) * .12;
+        ring.style.left = rx + 'px';
+        ring.style.top  = ry + 'px';
+        requestAnimationFrame(tick);
+      })();
+
+      document.querySelectorAll('a, button').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          cur.style.width   = '18px';
+          cur.style.height  = '18px';
+          ring.style.width  = '58px';
+          ring.style.height = '58px';
+        });
+        el.addEventListener('mouseleave', () => {
+          cur.style.width   = '10px';
+          cur.style.height  = '10px';
+          ring.style.width  = '40px';
+          ring.style.height = '40px';
+        });
+      });
+
+      // Scroll reveal
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach((e, i) => {
+          if (e.isIntersecting) {
+            setTimeout(() => e.target.classList.add('visible'), i * 80);
+            obs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
