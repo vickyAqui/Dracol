@@ -422,26 +422,29 @@ nav {
   font-size: clamp(2.6rem, 3rem, 4.5rem);
   letter-spacing: .04em;
   line-height: 1;
+  margin-bottom: 50px;
 }
 
 
 
 /* ── ABOUT ───────────────────────────────────────────────── */
 #sobre {
+  justify-content: center;
+  padding-top: 18vh !important;
+  min-height: 100vh;
   background-color: white;
-  height: 100vh;
   width: 100%;
   margin-inline: auto;
   padding: 100px var(--gutter);
+  padding-top: 18vh !important;
+  padding-bottom: 50px !important;
   display: grid;
   grid-template-columns: repeat(2, minmax(280px, 1fr));
   gap: clamp(28px, 5vw, 80px);
-  align-items: center;
   border-bottom: 1px solid rgb(216, 216, 216);
 }
 
 .about-text .section-title {
-  margin-bottom: 28px;
   color: var(--black);
 }
 
@@ -482,12 +485,13 @@ nav {
 }
 
 .about-card {
+
   background: rgb(255, 255, 255);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 20px;
   overflow: hidden;
   position: relative;
-  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .about-card::before {
@@ -565,11 +569,12 @@ nav {
 
 /* ── COMMITMENTS ─────────────────────────────────────────── */
 #compromissos {
+  padding-top: 15vh !important;
   display: grid;
   align-items: center;
   background-color: white;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   margin-inline: auto;
   padding: 100px var(--gutter);
   border-bottom: 1px solid rgb(216, 216, 216);
@@ -686,9 +691,10 @@ nav {
 
 /* ── SERVICES ────────────────────────────────────────────── */
 #servicos {
-  display: grid;
-  align-items: center;
-  min-height: 100vh;
+  padding-top: 15vh !important;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
   background-color: white;
   width: 100%;
   margin-inline: auto;
@@ -696,9 +702,7 @@ nav {
   border-bottom: 1px solid rgb(216, 216, 216);
 }
 
-.serv-intro {
-  margin-bottom: 32px;
-}
+
 
 .serv-item {
   display: grid;
@@ -789,26 +793,21 @@ nav {
 
 /* ── CONTACT ─────────────────────────────────────────────── */
 #contato {
-  display: grid;
+  padding-top: 15vh !important;
+  min-height: 100vh;
+  justify-content: space-between;
+  display: flex;
   align-items: center;
   background-color: white;
-  width: 95%;
-  height: 100vh;
+  flex-direction: row;
+  width: 100%;
   margin-inline: auto;
   padding: 100px var(--gutter);
   border-top: 1px solid var(--border);
 }
 
-.contact-wrap {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(300px, 1fr));
-  gap: clamp(3vw, 6vw, 8vw);
-  align-items: start;
-}
 
-.contact-left .section-title {
-  margin-bottom: 24px;
-}
+
 
 .contact-tagline {
   font-size: 1.2rem;
